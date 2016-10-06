@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F90182A71DA64D330087788D /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90182A61DA64D330087788D /* ObjectiveGit.framework */; };
+		F90182A81DA64D330087788D /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F90182A61DA64D330087788D /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F90182AA1DA64D370087788D /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90182A61DA64D330087788D /* ObjectiveGit.framework */; };
+		F96980601DA4E569009ADC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F969805F1DA4E569009ADC70 /* AppDelegate.swift */; };
+		F96980621DA4E569009ADC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96980611DA4E569009ADC70 /* ViewController.swift */; };
+		F96980641DA4E569009ADC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96980631DA4E569009ADC70 /* Assets.xcassets */; };
+		F96980671DA4E569009ADC70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96980651DA4E569009ADC70 /* Main.storyboard */; };
+		F96980771DA4E5E7009ADC70 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96980761DA4E5E7009ADC70 /* FinderSync.swift */; };
+		F969807B1DA4E5E7009ADC70 /* GitStatus-FinderSync.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F96980721DA4E5E7009ADC70 /* GitStatus-FinderSync.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9E7E7F91DA5774F0005CE8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96980631DA4E569009ADC70 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F96980791DA4E5E7009ADC70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F96980541DA4E569009ADC70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F96980711DA4E5E7009ADC70;
+			remoteInfo = "GitStatus-FinderSync";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F90182A91DA64D330087788D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F90182A81DA64D330087788D /* ObjectiveGit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F969807F1DA4E5E7009ADC70 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F969807B1DA4E5E7009ADC70 /* GitStatus-FinderSync.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F90182971DA647BC0087788D /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = "Carthage/Checkouts/objective-git/build/Debug/ObjectiveGit.framework"; sourceTree = "<group>"; };
+		F90182A61DA64D330087788D /* ObjectiveGit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectiveGit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91A1E511DA5110400A8B236 /* GitStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitStatus.entitlements; sourceTree = "<group>"; };
+		F969805C1DA4E569009ADC70 /* GitStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F969805F1DA4E569009ADC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F96980611DA4E569009ADC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F96980631DA4E569009ADC70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F96980661DA4E569009ADC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F96980681DA4E569009ADC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F96980721DA4E5E7009ADC70 /* GitStatus-FinderSync.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GitStatus-FinderSync.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96980751DA4E5E7009ADC70 /* GitStatus_FinderSync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitStatus_FinderSync.entitlements; sourceTree = "<group>"; };
+		F96980761DA4E5E7009ADC70 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		F96980781DA4E5E7009ADC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F530611DA5156800E8C70C /* GitStatus-FinderSync-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitStatus-FinderSync-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F96980591DA4E569009ADC70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90182A71DA64D330087788D /* ObjectiveGit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F969806F1DA4E5E7009ADC70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90182AA1DA64D370087788D /* ObjectiveGit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F90182961DA647BC0087788D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F90182971DA647BC0087788D /* ObjectiveGit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F96980531DA4E569009ADC70 = {
+			isa = PBXGroup;
+			children = (
+				F90182A61DA64D330087788D /* ObjectiveGit.framework */,
+				F969805E1DA4E569009ADC70 /* GitStatus */,
+				F96980731DA4E5E7009ADC70 /* GitStatus-FinderSync */,
+				F969805D1DA4E569009ADC70 /* Products */,
+				F90182961DA647BC0087788D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F969805D1DA4E569009ADC70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F969805C1DA4E569009ADC70 /* GitStatus.app */,
+				F96980721DA4E5E7009ADC70 /* GitStatus-FinderSync.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F969805E1DA4E569009ADC70 /* GitStatus */ = {
+			isa = PBXGroup;
+			children = (
+				F91A1E511DA5110400A8B236 /* GitStatus.entitlements */,
+				F969805F1DA4E569009ADC70 /* AppDelegate.swift */,
+				F96980611DA4E569009ADC70 /* ViewController.swift */,
+				F96980631DA4E569009ADC70 /* Assets.xcassets */,
+				F96980651DA4E569009ADC70 /* Main.storyboard */,
+				F96980681DA4E569009ADC70 /* Info.plist */,
+			);
+			path = GitStatus;
+			sourceTree = "<group>";
+		};
+		F96980731DA4E5E7009ADC70 /* GitStatus-FinderSync */ = {
+			isa = PBXGroup;
+			children = (
+				F96980761DA4E5E7009ADC70 /* FinderSync.swift */,
+				F96980781DA4E5E7009ADC70 /* Info.plist */,
+				F96980741DA4E5E7009ADC70 /* Supporting Files */,
+				F9F530611DA5156800E8C70C /* GitStatus-FinderSync-Bridging-Header.h */,
+			);
+			path = "GitStatus-FinderSync";
+			sourceTree = "<group>";
+		};
+		F96980741DA4E5E7009ADC70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F96980751DA4E5E7009ADC70 /* GitStatus_FinderSync.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F969805B1DA4E569009ADC70 /* GitStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F969806B1DA4E569009ADC70 /* Build configuration list for PBXNativeTarget "GitStatus" */;
+			buildPhases = (
+				F96980581DA4E569009ADC70 /* Sources */,
+				F96980591DA4E569009ADC70 /* Frameworks */,
+				F969805A1DA4E569009ADC70 /* Resources */,
+				F969807F1DA4E5E7009ADC70 /* Embed App Extensions */,
+				F90182A91DA64D330087788D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F969807A1DA4E5E7009ADC70 /* PBXTargetDependency */,
+			);
+			name = GitStatus;
+			productName = GitStatus;
+			productReference = F969805C1DA4E569009ADC70 /* GitStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F96980711DA4E5E7009ADC70 /* GitStatus-FinderSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F969807C1DA4E5E7009ADC70 /* Build configuration list for PBXNativeTarget "GitStatus-FinderSync" */;
+			buildPhases = (
+				F969806E1DA4E5E7009ADC70 /* Sources */,
+				F969806F1DA4E5E7009ADC70 /* Frameworks */,
+				F96980701DA4E5E7009ADC70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GitStatus-FinderSync";
+			productName = "GitStatus-FinderSync";
+			productReference = F96980721DA4E5E7009ADC70 /* GitStatus-FinderSync.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F96980541DA4E569009ADC70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Guillaume Legrain";
+				TargetAttributes = {
+					F969805B1DA4E569009ADC70 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = F62A54H99Z;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					F96980711DA4E5E7009ADC70 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = F62A54H99Z;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F96980571DA4E569009ADC70 /* Build configuration list for PBXProject "GitStatus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F96980531DA4E569009ADC70;
+			productRefGroup = F969805D1DA4E569009ADC70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F969805B1DA4E569009ADC70 /* GitStatus */,
+				F96980711DA4E5E7009ADC70 /* GitStatus-FinderSync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F969805A1DA4E569009ADC70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96980641DA4E569009ADC70 /* Assets.xcassets in Resources */,
+				F96980671DA4E569009ADC70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96980701DA4E5E7009ADC70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7E7F91DA5774F0005CE8E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F96980581DA4E569009ADC70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96980621DA4E569009ADC70 /* ViewController.swift in Sources */,
+				F96980601DA4E569009ADC70 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F969806E1DA4E5E7009ADC70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96980771DA4E5E7009ADC70 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F969807A1DA4E5E7009ADC70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F96980711DA4E5E7009ADC70 /* GitStatus-FinderSync */;
+			targetProxy = F96980791DA4E5E7009ADC70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F96980651DA4E569009ADC70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F96980661DA4E569009ADC70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F96980691DA4E569009ADC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac/ObjectiveGit.framework/Headers/";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F969806A1DA4E569009ADC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac/ObjectiveGit.framework/Headers/";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		F969806C1DA4E569009ADC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GitStatus/GitStatus.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F62A54H99Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = GitStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = glegrain.GitStatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F969806D1DA4E569009ADC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GitStatus/GitStatus.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F62A54H99Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = GitStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = glegrain.GitStatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F969807D1DA4E5E7009ADC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "GitStatus-FinderSync/GitStatus_FinderSync.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F62A54H99Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/objective-git/build/Debug",
+				);
+				INFOPLIST_FILE = "GitStatus-FinderSync/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "glegrain.GitStatus.GitStatus-FinderSync";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GitStatus-FinderSync/GitStatus-FinderSync-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F969807E1DA4E5E7009ADC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "GitStatus-FinderSync/GitStatus_FinderSync.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F62A54H99Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/objective-git/build/Debug",
+				);
+				INFOPLIST_FILE = "GitStatus-FinderSync/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "glegrain.GitStatus.GitStatus-FinderSync";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GitStatus-FinderSync/GitStatus-FinderSync-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F96980571DA4E569009ADC70 /* Build configuration list for PBXProject "GitStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F96980691DA4E569009ADC70 /* Debug */,
+				F969806A1DA4E569009ADC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F969806B1DA4E569009ADC70 /* Build configuration list for PBXNativeTarget "GitStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F969806C1DA4E569009ADC70 /* Debug */,
+				F969806D1DA4E569009ADC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F969807C1DA4E5E7009ADC70 /* Build configuration list for PBXNativeTarget "GitStatus-FinderSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F969807D1DA4E5E7009ADC70 /* Debug */,
+				F969807E1DA4E5E7009ADC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F96980541DA4E569009ADC70 /* Project object */;
+}
