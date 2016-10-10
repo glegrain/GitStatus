@@ -21,7 +21,7 @@ class FinderSync: FIFinderSync {
         }
     }
     /// Dictionary containing the status for all the files in the observedRepo
-    var filesStatus: Dictionary<String, GTStatusDeltaStatus>? = nil
+    var filesStatus: Dictionary<String, GTDeltaType>? = nil
 
     struct BadgeIdentifiers {
         static let caution = "Caution"
@@ -80,7 +80,7 @@ class FinderSync: FIFinderSync {
             // print("indexToWDir FILE: \(indexToWorkingDirectory?.newFile?.path) is \(indexToWorkingDirectory?.status.rawValue)")
             // Add each file to the filesStatus dictionary
             // Set the status to the most critical between headToIndex and indexToWorkingDirectory). To be discussed.
-            var status: GTStatusDeltaStatus?
+            var status: GTDeltaType?
             var fileName: String?
             if let statusDelta = headToIndex {
                 fileName = statusDelta.newFile?.path
@@ -118,7 +118,7 @@ class FinderSync: FIFinderSync {
 
         do {
             if let repoURL = repositoryURL(for: url) {
-                observedRepo = try GTRepository(url: repoURL)
+                observedRepo = try GTRepository(url: repoURL, flags: 0, ceilingDirs: nil)
             }
         } catch let error {
             observedRepo = nil
@@ -171,13 +171,22 @@ class FinderSync: FIFinderSync {
                     return
                 case .deleted: // Should never happen. The file is deleted and no longer present in Finder.
                     return
-                case .modified, .copied, .renamed, .typeChange:
+                case .modified, .renamed, .copied:
                     FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.orange, for: url)
                     return
                 case .ignored:
                     FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.transparent, for: url)
                     return
                 case .untracked:
+                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.red, for: url)
+                    return
+                case .typeChange:
+                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.orange, for: url)
+                    return
+                case .unreadable:
+                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.red, for: url)
+                    return
+                case .conflicted:
                     FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.red, for: url)
                     return
                 }

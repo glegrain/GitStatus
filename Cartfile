@@ -1,1 +1,2 @@
-github "libgit2/objective-git"
+#github "libgit2/objective-git"
+github "glegrain/objective-git" "git_repository_open_ext"

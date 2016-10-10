@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F90182A71DA64D330087788D /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90182A61DA64D330087788D /* ObjectiveGit.framework */; };
-		F90182A81DA64D330087788D /* ObjectiveGit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F90182A61DA64D330087788D /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F90182AA1DA64D370087788D /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90182A61DA64D330087788D /* ObjectiveGit.framework */; };
+		F92761B41DA93DB6001B280C /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92761B31DA93DB6001B280C /* ObjectiveGit.framework */; };
+		F92761B51DA93DC4001B280C /* ObjectiveGit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F92761B31DA93DB6001B280C /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F96980601DA4E569009ADC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F969805F1DA4E569009ADC70 /* AppDelegate.swift */; };
 		F96980621DA4E569009ADC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96980611DA4E569009ADC70 /* ViewController.swift */; };
 		F96980641DA4E569009ADC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96980631DA4E569009ADC70 /* Assets.xcassets */; };
@@ -30,15 +29,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F90182A91DA64D330087788D /* Embed Frameworks */ = {
+		F92761B21DA93D34001B280C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F90182A81DA64D330087788D /* ObjectiveGit.framework in Embed Frameworks */,
+				F92761B51DA93DC4001B280C /* ObjectiveGit.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F92761B71DA93DEC001B280C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F969807F1DA4E5E7009ADC70 /* Embed App Extensions */ = {
@@ -55,9 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F90182971DA647BC0087788D /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = "Carthage/Checkouts/objective-git/build/Debug/ObjectiveGit.framework"; sourceTree = "<group>"; };
-		F90182A61DA64D330087788D /* ObjectiveGit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectiveGit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91A1E511DA5110400A8B236 /* GitStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitStatus.entitlements; sourceTree = "<group>"; };
+		F92761B31DA93DB6001B280C /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/Mac/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F969805C1DA4E569009ADC70 /* GitStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F969805F1DA4E569009ADC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96980611DA4E569009ADC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90182A71DA64D330087788D /* ObjectiveGit.framework in Frameworks */,
+				F92761B41DA93DB6001B280C /* ObjectiveGit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90182AA1DA64D370087788D /* ObjectiveGit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +99,7 @@
 		F90182961DA647BC0087788D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F90182971DA647BC0087788D /* ObjectiveGit.framework */,
+				F92761B31DA93DB6001B280C /* ObjectiveGit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +107,6 @@
 		F96980531DA4E569009ADC70 = {
 			isa = PBXGroup;
 			children = (
-				F90182A61DA64D330087788D /* ObjectiveGit.framework */,
 				F969805E1DA4E569009ADC70 /* GitStatus */,
 				F96980731DA4E5E7009ADC70 /* GitStatus-FinderSync */,
 				F969805D1DA4E569009ADC70 /* Products */,
@@ -162,7 +166,7 @@
 				F96980591DA4E569009ADC70 /* Frameworks */,
 				F969805A1DA4E569009ADC70 /* Resources */,
 				F969807F1DA4E5E7009ADC70 /* Embed App Extensions */,
-				F90182A91DA64D330087788D /* Embed Frameworks */,
+				F92761B21DA93D34001B280C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -181,6 +185,7 @@
 				F969806E1DA4E5E7009ADC70 /* Sources */,
 				F969806F1DA4E5E7009ADC70 /* Frameworks */,
 				F96980701DA4E5E7009ADC70 /* Resources */,
+				F92761B71DA93DEC001B280C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -343,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac/ObjectiveGit.framework/Headers/";
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -387,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac/ObjectiveGit.framework/Headers/";
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
