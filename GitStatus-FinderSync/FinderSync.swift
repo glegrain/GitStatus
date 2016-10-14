@@ -32,6 +32,21 @@ class FinderSync: FIFinderSync {
         static let transparent = "Transparent"
         static let cleanRepo = "Clean Repo"
         static let modifiedRepo = "Modified Repo"
+
+        static func badgeIdentifier(status: GTDeltaType) -> String {
+            switch status {
+            case .unmodified: return BadgeIdentifiers.green
+            case .added: return BadgeIdentifiers.plus
+            case .deleted: return BadgeIdentifiers.red
+            case .modified, .renamed, .copied: return  BadgeIdentifiers.orange
+            case .ignored: return BadgeIdentifiers.transparent
+            case .untracked: return BadgeIdentifiers.red
+            case .typeChange: return  BadgeIdentifiers.orange
+            case .unreadable: return BadgeIdentifiers.red
+            case .conflicted: return BadgeIdentifiers.red
+            }
+
+        }
     }
 
     override init() {
@@ -70,8 +85,15 @@ class FinderSync: FIFinderSync {
         // Set options to enumerate all files
         let options: [String: Any] = [
             GTRepositoryStatusOptionsShowKey: NSNumber(value: GTRepositoryStatusOptionsShowIndexAndWorkingDirectory.rawValue),
-            GTRepositoryStatusOptionsFlagsKey: NSNumber(value: (GTRepositoryStatusFlagsIncludeUntracked.rawValue | GTRepositoryStatusFlagsRenamesHeadToIndex.rawValue | GTRepositoryStatusFlagsIncludeIgnored.rawValue | GTRepositoryStatusFlagsIncludeUnmodified.rawValue)),
-            ]
+            GTRepositoryStatusOptionsFlagsKey: NSNumber(value: (
+                GTRepositoryStatusFlagsIncludeUnmodified.rawValue |
+                GTRepositoryStatusFlagsIncludeUntracked.rawValue |
+                GTRepositoryStatusFlagsIncludeIgnored.rawValue |
+                GTRepositoryStatusFlagsRecurseUntrackedDirectories.rawValue |
+                GTRepositoryStatusFlagsRecurseIgnoredDirectories.rawValue |
+                GTRepositoryStatusFlagsRenamesHeadToIndex.rawValue
+            ))
+        ]
 
         // Get status for files in observedRepo
         // NOTE: Slow for large repos.
@@ -117,9 +139,9 @@ class FinderSync: FIFinderSync {
         observedRepo = nil
 
         do {
-            if let repoURL = repositoryURL(for: url) {
-                observedRepo = try GTRepository(url: repoURL, flags: 0, ceilingDirs: nil)
-            }
+            // if let repoURL = repositoryURL(for: url) {
+            observedRepo = try GTRepository(url: url, flags: 0, ceilingDirs: nil)
+            //}
         } catch let error {
             observedRepo = nil
             print("Failed to get repository information:  \(error)")
@@ -156,40 +178,15 @@ class FinderSync: FIFinderSync {
         if observedRepo != nil && filesStatus != nil {
 
             guard let fileName = url.relativePath(to: observedRepo!.fileURL) else {
-                // unable to get a relat path
+                // unable to get a relative path
                 return
             }
 
             // Check if dictionary contains status info for the request fileName
             if let status = filesStatus![fileName] {
-                switch status {
-                case .unmodified:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.green, for: url)
-                    return
-                case .added:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.plus, for: url)
-                    return
-                case .deleted: // Should never happen. The file is deleted and no longer present in Finder.
-                    return
-                case .modified, .renamed, .copied:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.orange, for: url)
-                    return
-                case .ignored:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.transparent, for: url)
-                    return
-                case .untracked:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.red, for: url)
-                    return
-                case .typeChange:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.orange, for: url)
-                    return
-                case .unreadable:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.red, for: url)
-                    return
-                case .conflicted:
-                    FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.red, for: url)
-                    return
-                }
+                let badgeID = BadgeIdentifiers.badgeIdentifier(status: status)
+                FIFinderSyncController.default().setBadgeIdentifier(badgeID, for: url)
+                return
             }
 
             // If isDirectory, check if content is clean
@@ -204,10 +201,12 @@ class FinderSync: FIFinderSync {
                     }
                 }
                 // Only unmodified or ignored files have been found. The directory is clean.
+                // TODO: show ignored folders correctly
                 FIFinderSyncController.default().setBadgeIdentifier(BadgeIdentifiers.green, for: url)
                 return
             }
         }
+        NSLog("FAILED requestBadgeIdentifierForURL: %@", url.path as NSString)
 
     }
 
